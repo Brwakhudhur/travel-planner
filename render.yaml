@@ -3,11 +3,14 @@ services:
     name: travelplaner-backend
     runtime: node
     rootDir: backend
-    buildCommand: npm install && npm run build
+    buildCommand: npm install --include=dev && npm run build
     startCommand: npm start
+    healthCheckPath: /api/health
     envVars:
       - key: NODE_ENV
         value: production
+      - key: NODE_VERSION
+        value: 20
       - key: PORT
         value: 5001
       - key: JWT_EXPIRES_IN
@@ -17,7 +20,7 @@ services:
       - key: JWT_SECRET
         sync: false
       - key: FRONTEND_URL
-        sync: false
+        value: https://fastidious-cannoli-171f7f.netlify.app
       - key: PEXELS_API_KEY
         sync: false
       - key: VISUAL_CROSSING_API_KEY
