@@ -64,8 +64,9 @@ function App() {
           </Routes>
         </main>
 
-        <footer style={{ padding: '28px 0', color: 'var(--muted)', fontSize: '14px', textAlign: 'center' }}>
-          <div>&copy; {new Date().getFullYear()} Scoop Travel Planner • Built for your FYP</div>
+        <footer className="footer-glass" style={{ textAlign: 'center' }}>
+          <div className="footer-main">&copy; {new Date().getFullYear()} Scoop Travel Planner</div>
+          <div className="footer-sub">AI destination insights • Travel-friendly comparisons • Built for faster decisions</div>
         </footer>
       </div>
     </Router>

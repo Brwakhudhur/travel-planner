@@ -54,11 +54,13 @@ const Register: React.FC<RegisterProps> = ({ onLogin }) => {
 
   return (
     <div className="auth-wrapper">
-      <div className="card auth-card auth-card-wide">
-        <h1 style={{ marginBottom: '8px' }}>Create your free account</h1>
-        <p className="muted" style={{ marginBottom: '24px' }}>
-          Join Scoop to save favorites, compare destinations and build mini-itineraries.
-        </p>
+      <div className="card auth-card auth-card-wide auth-surface animate-fade-up">
+        <div className="auth-header">
+          <h1 className="auth-title">Create your free account</h1>
+          <p className="auth-subtitle">
+            Unlock personalized recommendations, saved favorites, and faster trip comparisons.
+          </p>
+        </div>
 
         {error && <div className="error">{error}</div>}
 
@@ -125,13 +127,13 @@ const Register: React.FC<RegisterProps> = ({ onLogin }) => {
             {loading ? 'Creating account...' : 'Create account'}
           </button>
 
-          <div style={{ marginTop: '16px', textAlign: 'center' }}>
+          <div className="auth-divider">
             <Link to="/login" className="btn btn-outline btn-mobile-full">
               I already have an account
             </Link>
           </div>
 
-          <p className="muted" style={{ marginTop: '16px', fontSize: '13px', textAlign: 'center' }}>
+          <p className="muted" style={{ marginTop: '16px', fontSize: '13px', textAlign: 'center', lineHeight: '1.6' }}>
             By creating an account, you'll unlock personalized results, favorites and itinerary tools.
           </p>
         </form>

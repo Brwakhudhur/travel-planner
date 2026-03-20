@@ -3,61 +3,87 @@ import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => {
   return (
-    <div>
+    <div className="animate-fade-up">
       <section className="hero-grid">
-        <div className="card">
-          <h1 style={{ fontSize: 'clamp(2rem, 8vw, 44px)', lineHeight: '1.1', margin: '0 0 16px' }}>
-            Find your next <span style={{
+        <div className="card hero-card">
+          <span className="hero-eyebrow">AI-powered travel planning</span>
+          <h1 className="hero-title">
+            Plan a trip you’ll actually <span style={{
               background: 'linear-gradient(135deg, #7aa7ff, #6df0c2)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent'
-            }}>perfect destination</span>
+            }}>want to take</span>
           </h1>
-          
-          <p style={{ fontSize: 'clamp(1rem, 4vw, 18px)', color: '#d7def5', marginBottom: '24px', lineHeight: '1.6' }}>
-            Scoop Travel Planner helps you discover cities, beaches and nature escapes matched to your season, budget and style. 
-            Save favorites, compare options and build short itineraries in minutes.
+
+          <p className="hero-subtitle">
+            Scoop finds destinations based on your dates, budget, and interests—then helps you compare flights, weather, and stays in one place.
           </p>
 
-          <div className="cta-row" style={{ marginBottom: '16px' }}>
+          <div className="cta-row" style={{ marginBottom: '8px' }}>
             <Link to="/register" className="btn btn-primary">
-              Create your free account
+              Start Planning Free
             </Link>
             <Link to="/login" className="btn btn-outline">
-              I already have an account
+              Sign In
             </Link>
           </div>
 
-          <p className="muted" style={{ fontSize: '14px' }}>
-            Registration unlocks favorites, personalized results and saved itineraries.
-          </p>
+          <div className="hero-proof">
+            <span className="proof-pill">No credit card required</span>
+            <span className="proof-pill">Personalized matches</span>
+            <span className="proof-pill">Save favorites instantly</span>
+          </div>
         </div>
 
-        <div className="card" style={{ padding: '32px', textAlign: 'center' }}>
-          <div style={{ fontSize: '64px', marginBottom: '16px' }}>✈️</div>
-          <h3 style={{ marginBottom: '12px' }}>Ready to explore?</h3>
-          <p className="muted">Join thousands of travelers finding their perfect destinations</p>
+        <div className="card hero-panel">
+          <h3>How Scoop helps you decide faster</h3>
+          <p className="muted">Use one flow from discovery to shortlist—no tab switching, no manual comparison sheets.</p>
+
+          <div className="hero-panel-list">
+            <div className="hero-panel-item">1. Enter your travel dates and preferences</div>
+            <div className="hero-panel-item">2. Review destination matches with reasons</div>
+            <div className="hero-panel-item">3. Compare flights, weather, and hotels</div>
+          </div>
+
+          <div className="hero-stats">
+            <div className="stat-tile">
+              <div className="stat-value">Top 10</div>
+              <div className="stat-label">AI-ranked destinations</div>
+            </div>
+            <div className="stat-tile">
+              <div className="stat-value">1 search</div>
+              <div className="stat-label">for flights + weather + stays</div>
+            </div>
+            <div className="stat-tile">
+              <div className="stat-value">Saved</div>
+              <div className="stat-label">favorites for quick comparison</div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section style={{ padding: '40px 0' }}>
-        <h2 style={{ fontSize: '28px', marginBottom: '24px' }}>Why you'll love Scoop</h2>
+      <section className="section-wrap">
+        <div className="section-heading">
+          <h2>Everything you need to choose with confidence</h2>
+          <p>Clear recommendations, practical travel details, and a workflow designed for real trip planning.</p>
+        </div>
+
         <div className="grid grid-2">
-          <div className="card">
-            <h3>🎯 Personalized results</h3>
-            <p className="muted">Filter by season, budget, nightlife, nature and more—get destinations that match your vibe.</p>
+          <div className="card feature-card">
+            <h3>🎯 Smart destination matching</h3>
+            <p>Get recommendations tuned to your month, budget range, and travel style—not generic lists.</p>
           </div>
-          <div className="card">
-            <h3>❤️ Favorites & compare</h3>
-            <p className="muted">Shortlist places you like, then compare cost, weather and highlights side-by-side.</p>
+          <div className="card feature-card">
+            <h3>✈️ Built-in travel context</h3>
+            <p>See flights, weather outlook, hotels, and local highlights in the same planning view.</p>
           </div>
-          <div className="card">
-            <h3>📍 Smart search</h3>
-            <p className="muted">Search by month, budget, and interests to find destinations perfect for you.</p>
+          <div className="card feature-card">
+            <h3>❤️ Shortlist and compare</h3>
+            <p>Save options as favorites and return anytime to compare your best trip candidates.</p>
           </div>
-          <div className="card">
-            <h3>🔐 Secure & private</h3>
-            <p className="muted">Your data is encrypted and secure. Register to access all features.</p>
+          <div className="card feature-card">
+            <h3>⚡ Fast planning workflow</h3>
+            <p>Go from idea to actionable options in minutes with fewer clicks and cleaner decisions.</p>
           </div>
         </div>
       </section>

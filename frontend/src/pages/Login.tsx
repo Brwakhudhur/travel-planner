@@ -42,11 +42,13 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
 
   return (
     <div className="auth-wrapper">
-      <div className="card auth-card">
-        <h1 style={{ marginBottom: '8px' }}>Welcome back</h1>
-        <p className="muted" style={{ marginBottom: '24px' }}>
-          Sign in to see your favorites and continue planning.
-        </p>
+      <div className="card auth-card auth-surface animate-fade-up">
+        <div className="auth-header">
+          <h1 className="auth-title">Welcome back</h1>
+          <p className="auth-subtitle">
+            Sign in to continue planning, manage favorites, and compare destinations faster.
+          </p>
+        </div>
 
         {error && <div className="error">{error}</div>}
 
@@ -84,9 +86,9 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
             {loading ? 'Signing in...' : 'Sign in'}
           </button>
 
-          <div style={{ marginTop: '16px', textAlign: 'center' }}>
+          <div className="auth-divider">
             <span className="muted">New here? </span>
-            <Link to="/register" style={{ color: '#7aa7ff', textDecoration: 'underline' }}>
+            <Link to="/register" className="auth-link">
               Create an account
             </Link>
           </div>
