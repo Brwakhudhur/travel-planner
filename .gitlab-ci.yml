@@ -1,0 +1,26 @@
+stages:
+  - install
+  - test
+
+backend-install:
+  stage: install
+  image: node:18
+  script:
+    - cd backend
+    - npm install
+  cache:
+    key: backend-$CI_COMMIT_REF_SLUG
+    paths:
+      - backend/node_modules/
+
+backend-test:
+  stage: test
+  image: node:18
+  script:
+    - cd backend
+    - npm install
+    - npm test
+  cache:
+    key: backend-$CI_COMMIT_REF_SLUG
+    paths:
+      - backend/node_modules/
