@@ -132,19 +132,3 @@ This repo already includes deployment config:
 
 - netlify.toml
 - render.yaml
-
-See detailed deployment steps in DEPLOYMENT.md.
-
-## Security Notes
-
-- Do not commit real secrets to source control.
-- Set strong JWT secrets and admin passwords in production.
-- Restrict CORS origins to your deployed frontend domain.
-
-## Additional Documentation
-
-- QUICK_START.md
-- IMPLEMENTATION_SUMMARY.md
-- LAUNCH_CHECKLIST.md
-- HOTEL_INTEGRATION.md
-- EXTERNAL_PROVIDERS_GUIDE.md
